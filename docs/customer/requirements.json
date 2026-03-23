@@ -1,5 +1,5 @@
 {
-  "currentVersion": "v0.2",
+  "currentVersion": "v0.3",
   "status": "draft",
   "versions": [
     {
@@ -25,6 +25,18 @@
         "确认决策支持：老板支持，审批快",
         "竞对信息：正在调研SaaS版EAM，考虑定制开发"
       ]
+    },
+    {
+      "version": "v0.3",
+      "createdAt": "2026-03-23T00:00:00Z",
+      "trigger": "需求聚焦",
+      "inputSummary": "聚焦EAM核心需求",
+      "changeSummary": [
+        "REQ-001/002/004/005/006/007状态改为deactivated（非EAM相关）",
+        "更新scope，inScope仅保留EAM",
+        "移除suspectedNeeds中的非EAM项",
+        "更新currentChallenges/painPoints/expectedOutcomes，聚焦设备管理"
+      ]
     }
   ],
   "current": {
@@ -44,12 +56,7 @@
       "realNeeds": {
         "explicitNeeds": ["EAM设备管理系统"],
         "implicitNeeds": [],
-        "suspectedNeeds": [
-          "生产排程数字化需求",
-          "质量追溯需求",
-          "订单交期透明化需求",
-          "供应链协同需求"
-        ],
+        "suspectedNeeds": [],
         "needsNotMentioned": []
       },
       "decisionFactors": {
@@ -83,11 +90,9 @@
     "background": {
       "businessContext": "宜昌长机科技是国家专精特新重点小巨人企业，中国唯一的全系列插齿机制造基地，专注于齿轮加工机床研发生产50余年。公司主营数控插齿机、滚齿机、铣齿机、刮齿机等齿轮加工机床，采用B2B直销+代理商渠道模式，同时提供设备销售+再制造服务+技术支持。",
       "currentChallenges": [
-        "多品种小批量定制化生产，排产复杂度高[假设待验证]",
-        "质量追溯和过程控制仍有提升空间",
-        "零部件供应链协同和库存管理存在挑战[假设待验证]",
         "高价值设备密集，OEE分析和预测性维护需求强烈",
-        "定制化设备订单交付周期长，交期透明度有待提升[假设待验证]"
+        "设备故障突发，维护计划执行率待提升",
+        "备件库存管理存在优化空间"
       ],
       "triggerEvent": "客户明确EAM系统立项，预算100万，年底前上线",
       "currentSystems": [
@@ -100,18 +105,15 @@
         "bottlenecks": []
       },
       "painPoints": [
-        { "area": "生产管理", "description": "排产复杂度高，进度不透明", "severity": "中" },
-        { "area": "质量管理", "description": "质量追溯困难，客诉处理慢", "severity": "中" },
         { "area": "设备管理", "description": "设备故障突发，OEE低", "severity": "中高" },
-        { "area": "订单管理", "description": "交期难跟踪，透明度低", "severity": "中" },
-        { "area": "供应链管理", "description": "供应商协同困难，库存管理挑战", "severity": "中" }
+        { "area": "备件管理", "description": "备件库存不合理，缺件/积压并存", "severity": "中" },
+        { "area": "维护管理", "description": "预防性维护计划执行率低", "severity": "中" }
       ],
       "expectedOutcomes": [
-        "提升排产效率30%+",
-        "缩短交付周期",
-        "提升质量追溯效率",
-        "降低设备停机时间20%+",
-        "提升客户满意度"
+        "提升设备OEE 20%+",
+        "降低设备停机时间",
+        "提升预防性维护计划执行率",
+        "优化备件库存成本"
       ]
     },
     "needs": [
@@ -127,7 +129,7 @@
           "detail": "基于制造业痛点库-生产管理：多品种小批量定制化生产，排产复杂度高",
           "raw": null
         },
-        "status": "active",
+        "status": "deactivated",
         "module": "APS",
         "userStory": "作为生产计划员，我希望系统能自动生成排产方案并实时展示进度，以便快速响应插单需求",
         "acceptanceCriteria": [
@@ -152,7 +154,7 @@
           "detail": "基于制造业痛点库-质量管理+客户档案：已通过高等级质量管理认证，但质量追溯和过程控制仍有提升空间",
           "raw": null
         },
-        "status": "active",
+        "status": "deactivated",
         "module": "QMS",
         "userStory": "作为质量经理，我希望能够追溯产品全生命周期的质量数据，以便快速处理客诉和质量问题",
         "acceptanceCriteria": [
@@ -208,7 +210,7 @@
           "detail": "基于制造业痛点库-订单管理+客户档案：定制化设备订单交付周期长，交期透明度有待提升",
           "raw": null
         },
-        "status": "active",
+        "status": "deactivated",
         "module": "OMS",
         "userStory": "作为销售，我希望客户能自助查询订单进度，以减少交期咨询工作量",
         "acceptanceCriteria": [
@@ -235,7 +237,7 @@
           "detail": "基于制造业痛点库-供应链管理+客户档案：离散型制造企业，零部件供应链协同和库存管理存在挑战",
           "raw": null
         },
-        "status": "active",
+        "status": "deactivated",
         "module": "SRM",
         "userStory": "作为采购员，我希望供应商能协同响应采购订单，以便减少缺料停产风险",
         "acceptanceCriteria": [
@@ -261,7 +263,7 @@
           "detail": "基于客户档案-机会分析：已获数字化转型AAA级认证，MES/APS/数字孪生等解决方案契合度高",
           "raw": null
         },
-        "status": "active",
+        "status": "deactivated",
         "module": "MES",
         "userStory": "作为车间主任，我希望能够实时监控车间生产状态，以便快速处理异常",
         "acceptanceCriteria": [
@@ -287,7 +289,7 @@
           "detail": "基于客户档案-商业模式：提供设备销售+再制造服务+技术支持，再制造业务需要系统支撑",
           "raw": null
         },
-        "status": "active",
+        "status": "deactivated",
         "module": "再制造管理",
         "userStory": "作为再制造业务负责人，我希望系统能管理旧机评估和再制造全流程，以保证服务质量",
         "acceptanceCriteria": [
@@ -420,9 +422,9 @@
       }
     ],
     "scope": {
-      "inScope": ["设备管理（EAM）", "生产排程（APS）", "质量追溯（QMS）", "MES车间执行"],
-      "outOfScope": ["财务核算", "HR管理", "OA办公"],
-      "futureScope": ["订单管理（OMS）", "供应商协同（SRM）", "再制造管理", "数字孪生"],
+      "inScope": ["设备管理（EAM）"],
+      "outOfScope": ["财务核算", "HR管理", "OA办公", "生产排程（APS）", "质量追溯（QMS）", "MES车间执行", "订单管理（OMS）", "供应商协同（SRM）"],
+      "futureScope": ["再制造管理", "其他模块待客户确认"],
       "phases": [
         {
           "phase": "一期",
@@ -432,16 +434,16 @@
         },
         {
           "phase": "二期",
-          "modules": ["质量追溯", "生产排程", "MES"],
-          "duration": "待确认",
-          "goals": ["提升生产效率", "实现数字化车间"]
+          "modules": ["待客户确认"],
+          "duration": "待定",
+          "goals": ["根据一期效果评估"]
         }
       ],
       "priorityMatrix": [
-        { "quadrant": "高价值+低成本", "items": ["EAM设备管理", "质量追溯"] },
-        { "quadrant": "高价值+高成本", "items": ["生产排程", "MES"] },
+        { "quadrant": "高价值+低成本", "items": ["EAM设备管理"] },
+        { "quadrant": "高价值+高成本", "items": [] },
         { "quadrant": "低价值+低成本", "items": [] },
-        { "quadrant": "低价值+高成本", "items": ["再制造管理（初期）"] }
+        { "quadrant": "低价值+高成本", "items": [] }
       ]
     },
     "constraints": {
