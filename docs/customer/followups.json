@@ -18,8 +18,8 @@
           "action": "安排技术交流，澄清需求细节",
           "owner": "售前",
           "deadline": "2026-03月底",
-          "done": true,
-          "completedAt": "2026-03-24"
+          "done": false,
+          "completedAt": null
         },
         {
           "action": "收集客户现有资产数据、业务流程",
