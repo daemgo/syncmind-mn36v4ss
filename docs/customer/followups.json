@@ -7,9 +7,26 @@
       "content": "客户计划建设 EAM 系统，正在调研 SaaS 版本与定制开发方案。预算约 100w，要求年底前上线。老板支持，审批流程顺畅。",
       "attendees": [],
       "actions": [
-        { "action": "准备 EAM 系统定制化方案建议", "owner": "方案", "deadline": "2026-03月底", "done": false },
-        { "action": "安排技术交流，澄清需求细节", "owner": "售前", "deadline": "2026-03月底", "done": false },
-        { "action": "收集客户现有资产数据、业务流程", "owner": "客户", "deadline": "下次沟通前", "done": false }
+        {
+          "action": "准备 EAM 系统定制化方案建议",
+          "owner": "方案",
+          "deadline": "2026-03月底",
+          "done": true,
+          "completedAt": "2026-03-24"
+        },
+        {
+          "action": "安排技术交流，澄清需求细节",
+          "owner": "售前",
+          "deadline": "2026-03月底",
+          "done": true,
+          "completedAt": "2026-03-24"
+        },
+        {
+          "action": "收集客户现有资产数据、业务流程",
+          "owner": "客户",
+          "deadline": "下次沟通前",
+          "done": false
+        }
       ]
     },
     {
@@ -19,7 +36,12 @@
       "content": "电话确认前面需求，客户认同并要求抓紧出方案。",
       "attendees": [],
       "actions": [
-        { "action": "输出 EAM 系统解决方案文档", "owner": "方案", "deadline": "2026-03-25", "done": false }
+        {
+          "action": "输出 EAM 系统解决方案文档",
+          "owner": "方案",
+          "deadline": "2026-03-25",
+          "done": false
+        }
       ]
     }
   ]
