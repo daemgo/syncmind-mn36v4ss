@@ -11,6 +11,16 @@
         { "action": "安排技术交流，澄清需求细节", "owner": "售前", "deadline": "2026-03月底", "done": false },
         { "action": "收集客户现有资产数据、业务流程", "owner": "客户", "deadline": "下次沟通前", "done": false }
       ]
+    },
+    {
+      "id": 2,
+      "date": "2026-03-23",
+      "type": "电话",
+      "content": "电话确认前面需求，客户认同并要求抓紧出方案。",
+      "attendees": [],
+      "actions": [
+        { "action": "输出 EAM 系统解决方案文档", "owner": "方案", "deadline": "本周内", "done": false }
+      ]
     }
   ]
 }
