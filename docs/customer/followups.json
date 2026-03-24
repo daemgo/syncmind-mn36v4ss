@@ -19,7 +19,7 @@
       "content": "电话确认前面需求，客户认同并要求抓紧出方案。",
       "attendees": [],
       "actions": [
-        { "action": "输出 EAM 系统解决方案文档", "owner": "方案", "deadline": "本周内", "done": false }
+        { "action": "输出 EAM 系统解决方案文档", "owner": "方案", "deadline": "2026-03-25", "done": false }
       ]
     }
   ]
